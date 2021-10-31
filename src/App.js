@@ -40,6 +40,10 @@ function App() {
 
 
   function getInfo() {
+    newSummary('Not given')
+    newMayor('Not given')
+    newPopulation(0)
+    newoverAllScore(0)
 
     document.getElementById('loadingScreen').style.display = 'block'
 
