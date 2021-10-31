@@ -1,38 +1,263 @@
+body {
+  background-color: rebeccapurple;
+  overflow-x: hidden;
+  overflow-x: hidden;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  width: 100%;
+  height: fit-content;
   min-height: 100vh;
+  background-color: #000000;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+h2 {
+  margin: 0;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  color: #02ee64;
+  font-family: "Verdana", sans-serif;
+}
+
+.Scorez {
+  width: 100%;
+  margin: auto;
+  max-width: 900px;
+  height: fit-content;
+  min-height: 100vh;
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  display: none;
+  animation-duration: 3s;
+}
+
+.catagory {
+  width: 95%;
+  max-width: 300px;
+  height: fit-content;
+  background-color: rgba(128, 0, 255, 0);
+  margin: auto;
+}
+
+.outlinebar {
+  background-color: rgb(42, 43, 42);
+  width: 100%;
+  height: 20px;
+  display: grid;
+  border-radius: 5px;
+  border-color: #383838;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.bar {
+  margin: auto;
+  margin-left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #00000000;
+  border-radius: 2px;
+  border-width: 1px;
+  border-color: white;
+}
+
+.search {
+  width: 100%;
+  height: 95vh;
+  background-color: black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-height: 95vh;
+  overflow-y: hidden;
+}
+
+.searchInputs {
+  width: 100%;
+  max-width: 800px;
+  height: fit-content;
+  background-color: rgb(0, 0, 0);
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+}
+
+#input {
+  width: 700px;
+  max-width: 80vw;
+  justify-self: right;
+  height: 7vh;
+  font-size: 2rem;
+  padding-left: 10px;
+  background-color: #02ee6400;
+  border-style: solid;
+  border-color: #02ee64;
+  color: #02ee64;
+}
+
+#input:focus {
+  background-color: rgba(255, 0, 0, 0);
+  border-style: solid;
+  border-color: #02ee64;
+  color: #02ee64;
+}
+
+#searchButton {
+  justify-self: left;
+  width: 100px;
+  max-width: 30vw;
+  border-style: solid;
+  border-color: #02ee64;
+  color: #02ee64;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#searchButton:active {
+  background-color: white;
+  color: #000000;
+}
+
+#frontPage {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  padding-right: 10px;
+  display: none;
+  background-color: #000000;
   color: white;
+  margin-top: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.contentx {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 800px) {
+  .Scorez {
+    grid-template-columns: auto;
   }
+  .searchInputs {
+    grid-template-columns: auto;
+  }
+  #searchButton {
+    justify-self: center;
+    width: 150px;
+    margin-top: 40px;
+    height: 50px;
+  }
+  #input {
+    justify-self: center;
+  }
+}
+
+p {
+  width: 90%;
+  margin: auto;
+}
+
+#back {
+  position: fixed;
+  width: 100px;
+  height: 40px;
+  top: 10px;
+  left: 10px;
+  background-color: #02ee64;
+  border-radius: 5px;
+  color: white;
+  border-style: solid;
+  border-color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  position: fixed;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+  position: fixed;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #02ee64;
+  position: fixed;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  position: fixed;
+}
+
+#animationBar {
+  width: 100%;
+  height: 100%;
+  background-color: #02ee64;
+  animation: sldein 3s ease-in;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: white;
+}
+
+@keyframes sldein {
+  from {
+    width: 0;
+  }
+
   to {
-    transform: rotate(360deg);
+    width: 100%;
+  }
+}
+
+@keyframes appear {
+  from {
+    background-color: black;
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+#loadingScreen {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  z-index: 100;
+  display: none;
+  margin: auto;
+}
+
+h1,
+p,
+.Scorez {
+  animation: fadeInUp 2s ease-in;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
