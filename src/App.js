@@ -138,7 +138,7 @@ function App() {
       <button onClick={() => returnBack()} id='back'>Return</button>
       <div id='1' className='search'>
         <div className='searchInputs'>
-          <input type="text" placeholder='city...' id='input'></input>
+          <input autocomplete="off" type="text" placeholder='city...' id='input'></input>
           <button id='searchButton' onClick={() => getInfo()}>Search!</button>
         </div>
       </div>
